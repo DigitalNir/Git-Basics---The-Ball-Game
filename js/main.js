@@ -1,4 +1,4 @@
-function onBallClick(elBall) {
+function onBallClick(elBall, maxDiameter) {
   // Get the computed styles of the element
   const computedStyle = window.getComputedStyle(elBall)
 
@@ -10,8 +10,8 @@ function onBallClick(elBall) {
   if (isNaN(currWidth)) currWidth = 50 // Assuming default width to start with
   if (isNaN(currHeight)) currHeight = 50 // Assuming default height to start with
 
-  currWidth = currWidth >= 400 ? 100 : currWidth
-  currHeight = currHeight >= 400 ? 100 : currHeight
+  currWidth = currWidth >= maxDiameter ? 100 : currWidth
+  currHeight = currHeight >= maxDiameter ? 100 : currHeight
 
   const randomSize = getRandomInt(20, 61)
   const randColor = '#' + getRandomColor()
