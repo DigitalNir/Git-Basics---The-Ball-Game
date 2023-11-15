@@ -13,6 +13,8 @@ h1 {
   width: 100px;
   height: 100px;
   text-align: center;
+  font-size: 22px;
+  font-weight: bold;
   border-radius: 50%;
   background-color: blueviolet;
 }
