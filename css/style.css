@@ -17,4 +17,5 @@ h1 {
   font-weight: bold;
   border-radius: 50%;
   background-color: blueviolet;
+  transition: width 1s, height 1s;
 }
