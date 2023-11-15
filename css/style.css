@@ -16,6 +16,14 @@ h1 {
   font-size: 22px;
   font-weight: bold;
   border-radius: 50%;
-  background-color: blueviolet;
   transition: width 1s, height 1s;
+}
+
+.ball1 {
+  background-color: blueviolet;
+}
+
+.ball2 {
+  background-color: green;
+  margin: 400px;
 }
