@@ -13,8 +13,10 @@ function onBallClick(elBall) {
   currWidth = currWidth >= 400 ? 100 : currWidth
   currHeight = currHeight >= 400 ? 100 : currHeight
 
-  elBall.style.width = currWidth + 50 + 'px'
-  elBall.style.height = currHeight + 50 + 'px'
+  const randomSize = getRandomInt(20, 61)
+
+  elBall.style.width = currWidth + randomSize + 'px'
+  elBall.style.height = currHeight + randomSize + 'px'
 
   elBall.innerText = elBall.style.width
 }
