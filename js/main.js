@@ -14,9 +14,12 @@ function onBallClick(elBall) {
   currHeight = currHeight >= 400 ? 100 : currHeight
 
   const randomSize = getRandomInt(20, 61)
+  const randColor = '#' + getRandomColor()
 
   elBall.style.width = currWidth + randomSize + 'px'
   elBall.style.height = currHeight + randomSize + 'px'
 
   elBall.innerText = elBall.style.width
+
+  elBall.style.backgroundColor = randColor
 }
