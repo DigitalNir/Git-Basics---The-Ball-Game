@@ -1,6 +1,11 @@
 const elBall1 = document.querySelector('.ball1')
 const elBall2 = document.querySelector('.ball2')
 const elBall3 = document.querySelector('.ball3')
+const elBall4 = document.querySelector('.ball4')
+
+let gGoverStartTime = 0
+let gGoverEndTime = 0
+let g4BallsInterval = 0
 
 function onBallClick(elBall, maxDiameter) {
   // Get the computed styles of the element
@@ -77,5 +82,28 @@ function onBallClick(elBall, maxDiameter) {
     <script src="js/main.js"></script>`
     document.querySelector('body').innerHTML = rawHtml
     document.querySelector('body').style.backgroundColor = 'black'
+  }
+}
+
+function onBallHoverStart(elBall) {
+  gGoverStartTime = Date.now()
+}
+
+function onBallHoverEnd(elBall) {
+  gGoverEndTime = Date.now()
+  g4BallsInterval = 0
+  clearInterval(g4BallsInterval)
+  let count = 0
+
+  if (gGoverEndTime - gGoverStartTime >= 2) {
+    g4BallsInterval = setInterval(() => {
+      if (count >= 10) return
+
+      count++
+      onBallClick(elBall1, 400)
+      onBallClick(elBall2, 200)
+      onBallClick(elBall3, 200)
+      onBallClick(elBall4, 300)
+    }, 2000)
   }
 }

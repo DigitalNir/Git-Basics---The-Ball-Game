@@ -13,7 +13,14 @@
     <div class="ball ball3" onclick="onBallClick(this, 200)">ball3</div>
     <div class="ball ball4" onclick="onBallClick(this, 400)">ball4</div>
     <div class="ball ball5" onclick="onBallClick(this, 400)">ball5</div>
-    <div class="ball ball6" onclick="onBallClick(this, 400)">ball6</div>
+    <div
+      class="ball ball6"
+      onclick="onBallClick(this, 400)"
+      onmouseenter="onBallHoverStart(this)"
+      onmouseleave="onBallHoverEnd(this)"
+    >
+      ball6
+    </div>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
   </body>
