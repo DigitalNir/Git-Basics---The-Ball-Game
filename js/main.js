@@ -41,4 +41,23 @@ function onBallClick(elBall, maxDiameter) {
     elBall1.style.width = tempSize
     elBall1.style.height = tempSize
   }
+
+  if (elBall.classList.contains('ball4')) {
+    let randAmountToReduce = getRandomInt(20, 61)
+
+    let newWidth1 = parseInt(elBall1.style.width) - randAmountToReduce
+    let newWidth2 = parseInt(elBall2.style.width) - randAmountToReduce
+    let newHeight1 = parseInt(elBall1.style.height) - randAmountToReduce
+    let newHeight2 = parseInt(elBall2.style.height) - randAmountToReduce
+
+    newWidth1 = newWidth1 < 100 ? 100 : newWidth1
+    newWidth2 = newWidth2 < 100 ? 100 : newWidth2
+    newHeight1 = newWidth1 < 100 ? 100 : newWidth1
+    newHeight2 = newHeight2 < 100 ? 100 : newWidth2
+
+    elBall2.style.width = newWidth1 + 'px'
+    elBall2.style.height = newHeight1 + 'px'
+    elBall1.style.width = newWidth2 + 'px'
+    elBall1.style.height = newHeight2 + 'px'
+  }
 }
