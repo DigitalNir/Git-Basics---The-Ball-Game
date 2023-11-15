@@ -24,6 +24,11 @@ h1 {
 }
 
 .ball2 {
-  background-color: green;
   margin: 400px;
+  background-color: green;
+}
+
+.ball3 {
+  margin: 200px;
+  background-color: red;
 }
