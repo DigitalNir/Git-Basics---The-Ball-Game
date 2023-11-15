@@ -60,4 +60,8 @@ function onBallClick(elBall, maxDiameter) {
     elBall1.style.width = newWidth2 + 'px'
     elBall1.style.height = newHeight2 + 'px'
   }
+
+  if (elBall.classList.contains('ball5')) {
+    document.body.style.backgroundColor = 'brown'
+  }
 }
