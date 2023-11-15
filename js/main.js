@@ -64,4 +64,18 @@ function onBallClick(elBall, maxDiameter) {
   if (elBall.classList.contains('ball5')) {
     document.body.style.backgroundColor = 'brown'
   }
+
+  if (elBall.classList.contains('ball6')) {
+    const rawHtml = `<h1>The Ball Game</h1>
+    <div class="ball ball1" onclick="onBallClick(this, 300)">ball1</div>
+    <div class="ball ball2" onclick="onBallClick(this, 200)">ball2</div>
+    <div class="ball ball3" onclick="onBallClick(this, 200)">ball3</div>
+    <div class="ball ball4" onclick="onBallClick(this, 400)">ball4</div>
+    <div class="ball ball5" onclick="onBallClick(this, 400)">ball5</div>
+    <div class="ball ball6" onclick="onBallClick(this, 400)">ball6</div>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>`
+    document.querySelector('body').innerHTML = rawHtml
+    document.querySelector('body').style.backgroundColor = 'black'
+  }
 }
